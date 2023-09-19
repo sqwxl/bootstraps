@@ -1,0 +1,21 @@
+#!/usr/bin/env python3
+
+import tomllib
+from runcommand import run
+
+with open("packages.toml", "rb") as f:
+    data = tomllib.load(f)
+
+run(["rpm-ostree", "install", "--idempotent", "--allow-inactive", *data["base"]])
+
+# install starship prompt
+run("curl -sS https://starship.rs/install.sh | sh", shell=True)
+
+# install pip and python packages
+run(["python3", "-m", "ensurepip"])
+run(["python3", "-m", "pip", "install", "--upgrade", "pip"])
+run(["python3", "-m", "pip", "install", "--upgrade", *data["python"]])
+
+# install node global packages
+run(["npm", "install", "-g", *data["node"]])
+

@@ -1,0 +1,42 @@
+base = [
+  "bat",
+  "cargo",
+  "clang",
+  "cmake",
+  "direnv",
+  "fd-find",
+  "fish",
+  "foot-terminfo",
+  "gcc",
+  "gcc-c++",
+  "golang",
+  "jq",
+  "lsd",
+  "neovim",
+  "nodejs",
+  "ripgrep",
+  "tldr",
+  "zoxide",
+]
+
+rust = ["rust", "rustfmt", "rust-analyzer", "clippy"]
+
+python = ["ipython", "pynvim"]
+
+node = ["neovim"]
+
+flatpak = [
+  "com.discordapp.Discord",
+  "com.google.Chrome",
+  "io.mpv.Mpv",
+  "org.freedesktop.Platform.ffmpeg-full",
+  "org.freedesktop.Platform.openh264",
+  "org.gnome.Evince",                     # document viewer
+  "org.keepassxc.KeePassXC",
+  "org.libreoffice.LibreOffice",
+  "org.mozilla.firefox",
+  "org.signal.Signal",
+  "org.telegram.desktop",
+  "org.telegram.desktop.webview",
+  "org.videolan.VLC",
+]
