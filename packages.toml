@@ -7,6 +7,7 @@ base = [
   "fd-find",
   "fish",
   "foot-terminfo",
+  "fzf",
   "gcc",
   "gcc-c++",
   "golang",
